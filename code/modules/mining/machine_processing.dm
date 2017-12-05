@@ -11,18 +11,19 @@
 	active_power_usage = 50
 
 	var/obj/machinery/mineral/processing_unit/machine = null
-	var/machinedir = NORTHEAST
+	var/machinedir = EAST
 	var/show_all_ores = 0
 	var/points = 0
 	var/obj/item/weapon/card/id/inserted_id
 
-/obj/machinery/mineral/processing_unit_console/Initialize()
+/obj/machinery/mineral/processing_unit_console/initialize()
 	. = ..()
-	src.machine = locate(/obj/machinery/mineral/processing_unit, get_step(src, machinedir))
-	if (machine)
-		machine.console = src
-	else
-		return INITIALIZE_HINT_QDEL
+	spawn(7)
+		src.machine = locate(/obj/machinery/mineral/processing_unit, get_step(src, machinedir))
+		if (machine)
+			machine.console = src
+		else
+			qdel(src)
 
 /obj/machinery/mineral/processing_unit_console/attack_hand(mob/user)
 	add_fingerprint(user)
