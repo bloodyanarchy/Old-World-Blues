@@ -146,6 +146,7 @@ var/list/mechtoys = list(
 	var/material_cost = list(
 		MATERIAL_PHORON = 5,
 		MATERIAL_PLATINUM = 5,
+		MATERIAL_PLATINUM = 5,
 	)
 	//control
 	var/ordernum
@@ -199,6 +200,8 @@ var/list/mechtoys = list(
 			if(istype(MA,/obj/structure/closet/crate))
 				var/obj/structure/closet/crate/CR = MA
 				callHook("sell_crate", list(CR, area_shuttle))
+
+				points += CR.points_per_crate
 				var/find_slip = 1
 
 				for(var/atom in CR)
