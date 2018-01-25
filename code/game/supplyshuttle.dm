@@ -146,7 +146,6 @@ var/list/mechtoys = list(
 	var/material_cost = list(
 		MATERIAL_PHORON = 5,
 		MATERIAL_PLATINUM = 5,
-		MATERIAL_PLATINUM = 5,
 	)
 	//control
 	var/ordernum
