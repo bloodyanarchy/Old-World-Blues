@@ -54,7 +54,7 @@
 	allowed_roles = list("Warden")
 
 /datum/gear/head/cowboyhat
-	display_name = "cowbow hat"
+	display_name = "cowboy hat"
 	path = /obj/item/clothing/head/cowboy_hat
 	options = list(
 		"classic"    = /obj/item/clothing/head/cowboy_hat,
