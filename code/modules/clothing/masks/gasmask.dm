@@ -118,4 +118,3 @@
 	name = "security gasmask"
 	desc = "That's a standard-issue gasmask of the NT security service. Looks too dystopian, isn't it?"
 	icon_state = "secgasmask"
-	item_state = "secgasmask"
